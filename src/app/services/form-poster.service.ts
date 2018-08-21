@@ -10,7 +10,7 @@ export class FormPoster {
     }
 
     postEmployeeForm(employee: Employee){
-        
+        console.log('posting employee ',employee);
     }
 
 }

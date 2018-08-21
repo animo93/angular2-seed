@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import { Employee } from '../model/employee.model';
 import { FormPoster } from '../services/form-poster.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'home',
@@ -29,5 +30,9 @@ export class HomeComponent {
     }else{
       this.hasPrimaryLanguageError = false;
     }
+  }
+
+  submitForm(form: NgForm){
+    this.formPoster.postEmployeeForm(this.model);
   }
 }
